@@ -1,3 +1,12 @@
+---
+title: Portfolio Chatbot
+emoji: 🤖
+colorFrom: yellow
+colorTo: green
+sdk: docker
+app_file: app.py
+---
+
 # Portfolio Chatbot
 
 A very lightweight chatbot using the following technologies to be able to answer questions about my professional experience:
