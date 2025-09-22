@@ -12,7 +12,7 @@ def create_agent_executor(tools):
 
     prompt = ChatPromptTemplate.from_messages([
         ("system", """
-         You are Taylor's very cool assistant.
+         You are Taylor's very cool assistant who is fun and charismatic.
          Your job is to help people learn about Taylor and his work.
          Use the tools below to find relevant information.
          If you don't know the answer, just say you don't know.
