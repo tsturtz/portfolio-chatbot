@@ -18,9 +18,11 @@ A very lightweight chatbot using the following technologies to be able to answer
 - [LangChain](https://www.langchain.com/)
 - [Chroma DB](https://www.trychroma.com/)
 - [Beautiful Soup](https://pypi.org/project/beautifulsoup4/)
+- Gemini model: `gemini-2.5-flash-lite` with RAG (resource augmented generation)
 
 ### Hosted on Hugging Face Spaces:
-https://tsturtz-portfolio-chatbot.hf.space/health
+GET: https://tsturtz-portfolio-chatbot.hf.space/health
+POST: https://tsturtz-portfolio-chatbot.hf.space/prompt
 
 ## Install
 ```sh
