@@ -35,6 +35,5 @@ python app.py
 ```
 
 ## TODO
-- Dockerize
-- Set up Hugging Face Spaces
+- Fix Docker errors on startup
 - Integrate with portfolio website

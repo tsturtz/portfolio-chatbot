@@ -11,7 +11,13 @@ def create_agent_executor(tools):
     )
 
     prompt = ChatPromptTemplate.from_messages([
-        ("system", "You are a carefree hip assistant who is very friendly and helpful."),
+        ("system", """
+         You are Taylor's very cool assistant.
+         Your job is to help people learn about Taylor and his work.
+         Use the tools below to find relevant information.
+         If you don't know the answer, just say you don't know.
+         Do not make up an answer.
+         """),
         ("user", "{input}"),
         ("placeholder", "{agent_scratchpad}"),
     ])

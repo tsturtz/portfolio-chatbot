@@ -7,7 +7,12 @@ from src.agent import create_agent_executor
 app = Flask(__name__)
 
 # Load and split website content
-docs = load_website_docs(["https://taylorsturtz.com"])
+docs = load_website_docs([
+    "https://taylorsturtz.com",
+    "https://taylorsturtz.com/resume",
+    "https://github.com/tsturtz",
+    "https://www.mobygames.com/person/1309509/taylor-sturtz/"
+])
 split_docs = split_documents(docs)
 print(f"Split into {len(split_docs)} chunks.")
 
