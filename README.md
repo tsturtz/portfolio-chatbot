@@ -31,11 +31,17 @@ source .venv/bin/activate # or Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+## Setup DB
+This is meant to be a manual process, as the information doesn't change very often.
+```sh
+make setup-db
+```
+
 ## Run
 ```sh
-python app.py
+make agent
 ```
 
 ## TODO
-- Fix Docker errors on startup
 - Integrate with portfolio website
+- Defend against bots (captcha / rate limiting)
