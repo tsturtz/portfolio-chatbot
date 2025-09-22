@@ -19,6 +19,9 @@ A very lightweight chatbot using the following technologies to be able to answer
 - [Chroma DB](https://www.trychroma.com/)
 - [Beautiful Soup](https://pypi.org/project/beautifulsoup4/)
 
+### Hosted on Hugging Face Spaces:
+https://tsturtz-portfolio-chatbot.hf.space/health
+
 ## Install
 ```sh
 python -m venv .venv
