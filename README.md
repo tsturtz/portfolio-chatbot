@@ -47,3 +47,4 @@ make agent
 - Defend against bots (captcha)
 - Sanitize input!
 - Add escape button to close the chat window.
+- Handle rate limiting in UI
