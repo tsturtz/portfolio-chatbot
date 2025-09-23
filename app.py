@@ -1,4 +1,6 @@
 from flask import Flask, request, jsonify
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 
 from src.tools import make_tools
 from src.agent import create_agent_executor
@@ -13,6 +15,13 @@ vectorstore = connect_to_vectorstore()
 retriever = vectorstore.as_retriever()
 tools = make_tools(retriever)
 agent_executor = create_agent_executor(tools)
+
+# Flask-Limiter to rate limit requests based on the user's IP address
+limiter = Limiter(
+    key_func=get_remote_address,
+    app=app,
+    default_limits=["100 per day", "50 per hour", "10 per minute"]
+)
 
 # Flask routes
 @app.route("/", methods=["GET"])

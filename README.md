@@ -44,4 +44,6 @@ make agent
 
 ## TODO
 - Integrate with portfolio website
-- Defend against bots (captcha / rate limiting)
+- Defend against bots (captcha)
+- Sanitize input!
+- Add escape button to close the chat window.
