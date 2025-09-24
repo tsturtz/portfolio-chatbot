@@ -24,4 +24,4 @@ def create_agent_executor(tools):
     ])
     agent = create_tool_calling_agent(llm=llm, tools=tools, prompt=prompt)
 
-    return AgentExecutor(agent=agent, tools=tools, verbose=VERBOSE_AGENT_LOGGING)
+    return AgentExecutor(agent=agent, tools=tools, verbose=True)
