@@ -24,27 +24,16 @@ A very lightweight chatbot using the following technologies to be able to answer
 GET: https://tsturtz-portfolio-chatbot.hf.space/health
 POST: https://tsturtz-portfolio-chatbot.hf.space/prompt
 
-## Install
-```sh
-python -m venv .venv
-source .venv/bin/activate # or Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-```
+## Getting Started
 
-## Setup DB
-This is meant to be a manual process, as the information doesn't change very often.
 ```sh
-make setup-db
-```
-
-## Run
-```sh
-make agent
+make help
 ```
 
 ## TODO
-- Integrate with portfolio website
 - Defend against bots (captcha)
 - Sanitize input!
 - Add escape button to close the chat window.
 - Handle rate limiting in UI
+- Add health check in case someone tries to chat while its sleeping or whatever
+- Make the chat window mobile responsive

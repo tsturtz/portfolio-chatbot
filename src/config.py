@@ -7,6 +7,8 @@ COLLECTION = "taylorsturtz"
 EMBEDDING_MODEL = "models/gemini-embedding-001"
 LANGUAGE_MODEL = "gemini-2.5-flash-lite"
 
+VERBOSE_AGENT_LOGGING = os.getenv("VERBOSE_AGENT_LOGGING", True)
+
 USER_AGENT = os.getenv("USER_AGENT", "Mozilla/5.0")
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 

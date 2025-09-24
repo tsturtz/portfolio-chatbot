@@ -17,10 +17,11 @@ def create_agent_executor(tools):
          You are Taylor Sturtz's helpful and professional assistant.
          You are fun and charismatic.
          Your sole purpose is to provide information about Taylor's skills and work experience based on the documents provided.
+         Refer to Taylor with he/him pronouns.
          """),
         ("user", "{input}"),
         ("placeholder", "{agent_scratchpad}"),
     ])
     agent = create_tool_calling_agent(llm=llm, tools=tools, prompt=prompt)
 
-    return AgentExecutor(agent=agent, tools=tools, verbose=True)
+    return AgentExecutor(agent=agent, tools=tools, verbose=VERBOSE_AGENT_LOGGING)
