@@ -10,6 +10,15 @@ from ..config import EMBEDDING_MODEL, COLLECTION
 from ..config import CHROMA_CLOUD_API_KEY, CHROMA_CLOUD_TENANT, CHROMA_CLOUD_DB_ENV
 from ..config import USER_AGENT
 
+DOC_IDS = [
+    "1melJsJNEMtqik7--dOQy0OO15OH12BzoPZqgwlV33z4", # Resume
+    "1vexKUdzNjUSNLNqTO4jDyKB8Fl9sWGJrUYEWkM8LVXM", # Facts
+]
+WEBSITE_URLS = [
+    "https://github.com/tsturtz",
+    "https://www.mobygames.com/person/1309509/taylor-sturtz/"
+]
+
 
 # Connect to Chroma Cloud
 client = chromadb.CloudClient(
@@ -27,21 +36,14 @@ except Exception:
 
 # Load documents from Google Drive
 google_docs_loader = GoogleDriveLoader(
-    file_ids=["1melJsJNEMtqik7--dOQy0OO15OH12BzoPZqgwlV33z4"],
+    document_ids=DOC_IDS,
+    scopes=["https://www.googleapis.com/auth/drive.readonly"],
 )
 google_docs = google_docs_loader.load()
 print(f"Loaded {len(google_docs)} documents from Google Drive.")
 
 # Scrape website content
-web_loader = WebBaseLoader(
-    [
-        "https://taylorsturtz.com",
-        "https://taylorsturtz.com/resume",
-        "https://github.com/tsturtz",
-        "https://www.mobygames.com/person/1309509/taylor-sturtz/"
-    ],
-    requests_kwargs={"headers": {"User-Agent": USER_AGENT}}
-)
+web_loader = WebBaseLoader(WEBSITE_URLS, requests_kwargs={"headers": {"User-Agent": USER_AGENT}})
 web_docs = web_loader.load()
 print(f"Loaded {len(web_docs)} documents from websites.")
 
