@@ -32,8 +32,6 @@ make help
 
 ## TODO
 - Defend against bots (captcha)
-- Sanitize input!
 - Add escape button to close the chat window.
-- Handle rate limiting in UI
+- Handle rate limiting in UI (already implemented on the server)
 - Add health check in case someone tries to chat while its sleeping or whatever
-- Make the chat window mobile responsive

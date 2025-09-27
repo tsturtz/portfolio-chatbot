@@ -76,6 +76,8 @@ def prompt():
     prompt_text = data.get("prompt", "")
     if not prompt_text:
         return jsonify({"error": "No prompt provided"}), 400
+    if prompt_text.len() > 500:
+        return jsonify({"error": "Prompt too long"}), 400
 
     try:
         result = agent_executor.invoke({"input": prompt_text})
