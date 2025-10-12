@@ -8,5 +8,7 @@ def make_tools(retriever):
     def retrieve_documents(query: str) -> list[str]:
         """Retrieves documents about Taylor from the vector database based on a query."""
         return retriever.invoke(query)
+    
+    # TODO: add more tools to get more specific answers
 
     return [retrieve_documents]
