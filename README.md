@@ -22,6 +22,7 @@ A very lightweight chatbot using the following technologies to be able to answer
 
 ### Hosted on Hugging Face Spaces:
 GET: https://tsturtz-portfolio-chatbot.hf.space/health
+
 POST: https://tsturtz-portfolio-chatbot.hf.space/prompt
 
 ## Getting Started
