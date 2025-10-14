@@ -34,4 +34,4 @@ make help
 - Defend against bots (captcha)
 - Add escape button to close the chat window.
 - Handle rate limiting in UI (already implemented on the server)
-- Add health check in case someone tries to chat while its sleeping or whatever
+- Look into using small model
